@@ -10,7 +10,7 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 @app.route("/voice", methods=['GET', 'POST'])
 def voice():
     response = VoiceResponse()
-    response.play('https://YOUR_AUDIO_LINK.mp3')  # <<< Mets ici ton lien ElevenLabs MP3
+    response.play('https://github.com/lauwillai/phoning-ia-cyber/blob/b690d04674be07a38b869a2f5b674d625dac1136/ElevenLabs_2025-04-26T19_18_52_Rachel_pre_sp100_s50_sb75_se0_b_m2.mp3')  # <<< Mets ici ton lien ElevenLabs MP3
     gather = Gather(input='speech', action='/analyze', timeout=5)
     gather.say('Si vous êtes intéressé, dites oui après le bip.')
     response.append(gather)
